@@ -67,7 +67,7 @@ class ReservasResource(Resource):
             
             if reservas_conflict:
                 return {"erro": "A sala não está disponível para o período solicitado."}, 409
-
+            
             validado = schema.load(dados)
             nova_reserva = Reserva(**validado)
             db.session.add(nova_reserva)
@@ -91,7 +91,7 @@ class ReservaResource(Resource):
         try:
             reserva = db.session.get(Reserva, reserva_id)
             if not reserva:
-                return {"erro": "Mesorregião não encontrada"}, 404
+                return {"erro": "Reserva não encontrada"}, 404
             return marshal(reserva, reserva_fields), 200
 
         except SQLAlchemyError:
