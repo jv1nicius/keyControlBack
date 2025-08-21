@@ -5,6 +5,9 @@ from sqlalchemy.exc import SQLAlchemyError
 from helpers.database import db
 from helpers.logging import logger, log_exception
 from models.Reserva import Reserva, ReservaSchema, reserva_fields
+from datetime import datetime
+from models.Responsavel import Responsavel
+from models.Sala import Sala
 
 
 class ReservasResource(Resource):
@@ -37,8 +40,34 @@ class ReservasResource(Resource):
         logger.info("POST - Nova reserva")
         schema = ReservaSchema()
         dados = request.get_json()
+        
+        sala_id = dados.get("sala_id")
+        responsavel_id = dados.get("responsavel_id")
+        data_hora_inicio = dados.get("data_hora_inicio")
+        data_hora_fim = dados.get("data_hora_fim")
 
         try:
+            
+            data_hora_inicio = datetime.fromisoformat(data_hora_inicio)
+            data_hora_fim = datetime.fromisoformat(data_hora_fim)
+            
+            sala = db.session.get(Sala, sala_id)
+            if not sala:
+                return {"erro": "Sala não encontrada"}, 404
+            
+            responsavel = db.session.get(Responsavel, responsavel_id)
+            if not responsavel:
+                return {"erro": "Responsável não encontrado"}, 404
+            
+            reservas_conflict = db.session.query(Reserva).filter(
+                Reserva.sala_id == sala_id,
+                Reserva.data_hora_inicio < data_hora_fim,
+                Reserva.data_hora_fim > data_hora_inicio
+            ).all()
+            
+            if reservas_conflict:
+                return {"erro": "A sala não está disponível para o período solicitado."}, 409
+            
             validado = schema.load(dados)
             nova_reserva = Reserva(**validado)
             db.session.add(nova_reserva)
@@ -62,7 +91,7 @@ class ReservaResource(Resource):
         try:
             reserva = db.session.get(Reserva, reserva_id)
             if not reserva:
-                return {"erro": "Mesorregião não encontrada"}, 404
+                return {"erro": "Reserva não encontrada"}, 404
             return marshal(reserva, reserva_fields), 200
 
         except SQLAlchemyError:
