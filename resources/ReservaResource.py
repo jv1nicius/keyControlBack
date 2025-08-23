@@ -108,7 +108,7 @@ class ReservaResource(Resource):
         dados = request.get_json()
 
         try:
-            reserva = db.session.get(Reserva, reserva_fields)
+            reserva = db.session.get(Reserva, reserva_id)
             if not reserva:
                 return {"erro": "Reserva não encontrada"}, 404
 

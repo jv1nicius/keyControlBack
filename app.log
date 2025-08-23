@@ -65,3 +65,84 @@
 2025-08-21 09:35:57,627 - INFO - GET ALL - Listagem de Finalizações
 2025-08-21 09:35:57,628 - INFO - Finalizações retornadas com sucesso
 2025-08-21 09:36:03,662 - INFO - GET BY finalizacao_id - Finalização 1
+2025-08-21 11:29:10,115 - INFO - POST - Novo Responsavel
+2025-08-21 11:31:08,115 - INFO - POST - Novo Responsavel
+2025-08-21 11:31:34,621 - INFO - POST - Novo Responsavel
+2025-08-21 11:31:51,489 - INFO - POST - Novo Responsavel
+2025-08-21 11:32:13,968 - INFO - POST - Novo Responsavel
+2025-08-21 11:34:01,510 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 11:34:01,527 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 11:34:07,680 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 11:34:07,686 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 11:35:47,527 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 11:35:47,538 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 11:36:02,348 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 11:36:02,353 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 11:36:24,693 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 11:36:24,698 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 11:36:56,464 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 11:36:56,492 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 11:37:57,264 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 11:37:57,278 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:04:30,638 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:04:30,887 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:05:25,757 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:05:25,791 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:05:36,840 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:05:36,847 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:05:40,205 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:05:40,210 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:05:59,253 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:05:59,268 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:07:49,281 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:07:49,293 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:09:25,773 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:09:25,795 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:09:42,862 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:09:42,871 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:10:09,390 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:10:09,397 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:10:22,107 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:10:22,116 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:10:33,865 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:10:33,879 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:10:50,441 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:10:50,509 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:10:53,858 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:10:53,866 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:14:07,399 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:14:07,407 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:16:28,827 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:16:28,834 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:25:38,781 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:25:38,803 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:25:46,215 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:25:46,224 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:26:19,671 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:26:19,677 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:36:48,550 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:36:48,586 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:39:15,845 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:39:15,864 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 14:39:19,739 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 14:39:19,745 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 18:39:08,905 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 18:39:08,993 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 18:39:11,940 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 18:39:11,950 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 18:40:42,126 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 18:40:42,132 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 18:44:51,144 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 18:44:51,185 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 18:44:57,973 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 18:44:57,994 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 18:45:11,434 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 18:45:11,439 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 18:46:09,097 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 18:46:09,104 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 18:47:00,038 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 18:47:00,085 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 18:47:46,052 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 18:47:46,058 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 18:48:38,584 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 18:57:09,494 - INFO - DELETE - responsavel 1

@@ -1,4 +1,13 @@
 2025-08-21 09:29:20,625 - ERROR - Erro SQLAlchemy ao buscar Responsaveis:
+2025-08-21 09:31:09,105 - ERROR - Erro SQLAlchemy ao buscar Responsaveis:
+	Traceback (most recent call last):
+	  File "/home/davi/Downloads/keyControlApi/venv/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 2522, in get_property
+	    return self._props[key]
+	           ~~~~~~~~~~~^^^^^
+	KeyError: 'finalizacao'
+	
+	The above exception was the direct cause of the following exception:
+	
 	Traceback (most recent call last):
 	  File "/home/davi/Downloads/keyControlApi/resources/ResponsavelResource.py", line 17, in get
 	    responsaveis = db.session.execute(query).scalars().all()
@@ -70,3 +79,23 @@
 	sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Finalizar(finalizacao)]'. Original exception was: Mapper 'Mapper[Reserva(reserva)]' has no property 'finalizacao'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
 	
 2025-08-21 09:29:21,340 - INFO - GET ALL - Listagem de Responsaveis
+	  File "/home/davi/Downloads/keyControlApi/venv/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 4255, in _do_configure_registries
+	    mapper._post_configure_properties()
+	  File "/home/davi/Downloads/keyControlApi/venv/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 2418, in _post_configure_properties
+	    prop.init()
+	  File "/home/davi/Downloads/keyControlApi/venv/lib/python3.12/site-packages/sqlalchemy/orm/interfaces.py", line 589, in init
+	    self.do_init()
+	  File "/home/davi/Downloads/keyControlApi/venv/lib/python3.12/site-packages/sqlalchemy/orm/relationships.py", line 1661, in do_init
+	    self._generate_backref()
+	  File "/home/davi/Downloads/keyControlApi/venv/lib/python3.12/site-packages/sqlalchemy/orm/relationships.py", line 2145, in _generate_backref
+	    self._add_reverse_property(self.back_populates)
+	  File "/home/davi/Downloads/keyControlApi/venv/lib/python3.12/site-packages/sqlalchemy/orm/relationships.py", line 1592, in _add_reverse_property
+	    other = self.mapper.get_property(key, _configure_mappers=False)
+	            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	  File "/home/davi/Downloads/keyControlApi/venv/lib/python3.12/site-packages/sqlalchemy/orm/mapper.py", line 2524, in get_property
+	    raise sa_exc.InvalidRequestError(
+	sqlalchemy.exc.InvalidRequestError: Mapper 'Mapper[Reserva(reserva)]' has no property 'finalizacao'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+	
+2025-08-21 09:33:35,994 - INFO - GET ALL - Listagem de Responsaveis
+2025-08-21 09:33:36,017 - INFO - Responsaveis retornadas com sucesso
+2025-08-21 09:33:46,287 - INFO - GET ALL - Listagem de Finalizações
