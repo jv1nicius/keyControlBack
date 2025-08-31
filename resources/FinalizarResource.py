@@ -7,6 +7,7 @@ from helpers.logging import logger, log_exception
 from datetime import datetime
 from models.Finalizar import Finalizar, FinalizarSchema, finalizacao_fields
 from models.Reserva import Reserva
+from models.Historico import Historico
 
 
 class FinalizacõesResource(Resource):
@@ -49,23 +50,37 @@ class FinalizacõesResource(Resource):
             if not reserva:
                 return {"erro": "Reserva não encontrada"}, 404
             
-            
             validado = schema.load(dados)
             nova_finalizacao = Finalizar(**validado)
             db.session.add(nova_finalizacao)
+
+            novo_historico = Historico(
+                reserva_id=reserva.reserva_id,
+                sala_id=reserva.sala_id,
+                responsavel_id=reserva.responsavel_id,
+                data_hora_inicio=reserva.data_hora_inicio,
+                data_hora_fim=data_hora_finalizacao
+            )
+            db.session.add(novo_historico)
+
             db.session.commit()
-            logger.info(f"Finalização {nova_finalizacao.finalizacao_id} criada com sucesso!")
+            logger.info(
+                f"Finalização {nova_finalizacao.finalizacao_id} criada "
+                f"e reserva {reserva.reserva_id} adicionada ao histórico!"
+            )
+
             return marshal(nova_finalizacao, finalizacao_fields), 201
 
         except ValidationError as err:
             return {"erro": "Dados inválidos", "detalhes": err.messages}, 422
         except SQLAlchemyError:
-            log_exception("Erro SQLAlchemy ao inserir finalização")
+            log_exception("Erro SQLAlchemy ao inserir finalização/histórico")
             db.session.rollback()
-            abort(500, description="Erro ao inserir finalização no banco.")
+            abort(500, description="Erro ao inserir finalização/histórico no banco.")
         except Exception:
-            log_exception("Erro inesperado ao inserir finalização")
+            log_exception("Erro inesperado ao inserir finalização/histórico")
             abort(500, description="Erro interno inesperado.")
+
 
 
 class FinalizarResource(Resource):
