@@ -106,7 +106,7 @@ class FinalizarResource(Resource):
         dados = request.get_json()
 
         try:
-            finalizacao = db.session.get(Finalizar, finalizacao_fields)
+            finalizacao = db.session.get(Finalizar, finalizar_id)
             if not finalizacao:
                 return {"erro": "Finalização não encontrada"}, 404
 
