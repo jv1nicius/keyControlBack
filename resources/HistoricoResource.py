@@ -81,7 +81,7 @@ class HistoricoResource(Resource):
         dados = request.get_json()
 
         try:
-            historico = db.session.get(Historico, historico_fields)
+            historico = db.session.get(Historico, historico_id)
             if not historico:
                 return {"erro": "Historico não encontrada"}, 404
 
