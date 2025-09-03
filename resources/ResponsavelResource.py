@@ -1,7 +1,7 @@
 from flask import request, abort
 from flask_restful import Resource, marshal
 from marshmallow import ValidationError
-from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy.exc import SQLAlchemyError, IntegrityError
 
 from helpers.database import db
 from helpers.logging import logger, log_exception
@@ -43,6 +43,15 @@ class ResponsaveisResource(Resource):
 
         except ValidationError as err:
             return {"erro": "Dados inválidos", "detalhes": err.messages}, 422
+        
+        except IntegrityError as e:
+            db.session.rollback()
+            msg = str(e.orig)
+            if "responsavel_cpf" in msg:
+                return {"erro": {"responsavel_cpf": ["Já existe um Responsavel cadastrado com esse CPF."]}}, 400
+            if "responsavel_siap" in msg:
+                return {"erro": {"responsavel_siap": ["Já existe um Responsavel cadastrado com esse SIAP."]}}, 400
+            return {"erro": "Violação de unicidade."}, 400
         except SQLAlchemyError:
             log_exception("Erro SQLAlchemy ao inserir Responsavel")
             db.session.rollback()

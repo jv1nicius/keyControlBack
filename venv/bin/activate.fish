@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /home/davi/Downloads/keyControlApi/venv
+set -gx VIRTUAL_ENV '/home/davi/Downloads/Teste Final/keyControlBack/venv'
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH

@@ -8,6 +8,7 @@ from flask_restful import fields as flaskFields
 finalizacao_fields = {
     'finalizacao_id': flaskFields.Integer,
     'reserva_id': flaskFields.Integer,
+    'data_hora_finalizacao': flaskFields.DateTime
 }
 
 

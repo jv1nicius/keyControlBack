@@ -1,0 +1,95 @@
+2025-09-03 09:28:43,446 - INFO - GET ALL - Listagem de Historicos
+2025-09-03 09:28:43,462 - INFO - Historicos retornadas com sucesso
+2025-09-03 09:28:51,615 - INFO - GET ALL - Listagem de Responsaveis
+2025-09-03 09:28:51,616 - INFO - Responsaveis retornadas com sucesso
+2025-09-03 09:28:52,829 - INFO - GET ALL - Listagem de Reservas
+2025-09-03 09:28:52,834 - INFO - Reservas retornadas com sucesso
+2025-09-03 09:29:00,977 - INFO - GET ALL - Listagem de Finalizações
+2025-09-03 09:29:00,987 - INFO - Finalizações retornadas com sucesso
+2025-09-03 09:29:39,509 - INFO - GET ALL - Listagem de Salas
+2025-09-03 09:29:39,520 - INFO - Salas retornadas com sucesso
+2025-09-03 10:03:30,515 - INFO - GET ALL - Listagem de Responsaveis
+2025-09-03 10:03:30,626 - INFO - Responsaveis retornadas com sucesso
+2025-09-03 10:03:45,271 - INFO - GET ALL - Listagem de Responsaveis
+2025-09-03 10:03:45,276 - INFO - Responsaveis retornadas com sucesso
+2025-09-03 10:03:53,005 - INFO - GET BY responsavel_id - Responsavel 1
+2025-09-03 10:04:18,063 - INFO - POST - Novo Responsavel
+2025-09-03 10:04:18,093 - ERROR - Erro SQLAlchemy ao inserir Responsavel:
+	Traceback (most recent call last):
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+	    self.dialect.do_execute(
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+	    cursor.execute(statement, parameters)
+	psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "responsavel_responsavel_siap_key"
+	DETAIL:  Key (responsavel_siap)=(1233) already exists.
+	
+	
+	The above exception was the direct cause of the following exception:
+	
+	Traceback (most recent call last):
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/resources/ResponsavelResource.py", line 41, in post
+	    db.session.commit()
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/orm/scoping.py", line 599, in commit
+	    return self._proxied.commit()
+	           ^^^^^^^^^^^^^^^^^^^^^^
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2032, in commit
+	    trans.commit(_to_root=True)
+	  File "<string>", line 2, in commit
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+	    ret_value = fn(self, *arg, **kw)
+	                ^^^^^^^^^^^^^^^^^^^^
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+	    self._prepare_impl()
+	  File "<string>", line 2, in _prepare_impl
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+	    ret_value = fn(self, *arg, **kw)
+	                ^^^^^^^^^^^^^^^^^^^^
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+	    self.session.flush()
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4345, in flush
+	    self._flush(objects)
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4480, in _flush
+	    with util.safe_reraise():
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+	    raise exc_value.with_traceback(exc_tb)
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4441, in _flush
+	    flush_context.execute()
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+	    rec.execute(self)
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+	    util.preloaded.orm_persistence.save_obj(
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+	    _emit_insert_statements(
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+	    result = connection.execute(
+	             ^^^^^^^^^^^^^^^^^^^
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+	    return meth(
+	           ^^^^^
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+	    return connection._execute_clauseelement(
+	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+	    ret = self._execute_context(
+	          ^^^^^^^^^^^^^^^^^^^^^^
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+	    return self._exec_single_context(
+	           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+	    self._handle_dbapi_exception(
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+	    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+	    self.dialect.do_execute(
+	  File "/home/davi/Downloads/Teste Final/keyControlBack/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+	    cursor.execute(statement, parameters)
+	sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "responsavel_responsavel_siap_key"
+	DETAIL:  Key (responsavel_siap)=(1233) already exists.
+	
+	[SQL: INSERT INTO responsavel (responsavel_nome, responsavel_siap, responsavel_cpf, responsavel_data_nascimento) VALUES (%(responsavel_nome)s, %(responsavel_siap)s, %(responsavel_cpf)s, %(responsavel_data_nascimento)s) RETURNING responsavel.responsavel_id]
+	[parameters: {'responsavel_nome': 'Davi', 'responsavel_siap': '1233', 'responsavel_cpf': '0983', 'responsavel_data_nascimento': datetime.date(1990, 7, 11)}]
+	(Background on this error at: https://sqlalche.me/e/20/gkpj)
+	
+2025-09-03 10:04:32,766 - INFO - POST - Novo Responsavel
+2025-09-03 10:04:39,235 - INFO - POST - Novo Responsavel
+2025-09-03 10:06:51,160 - INFO - POST - Novo Responsavel
